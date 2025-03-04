@@ -3,7 +3,7 @@
 #include "Player.h"
 
 class Computer : public Player{
-    Computer(){this->name = "Computer"; move = "R";};
+    Computer(){this->name = "Computer"; this->move = 'R';};
 
 };
 
