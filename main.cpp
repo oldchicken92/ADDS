@@ -8,7 +8,7 @@ int main (){
     Human player;
     Computer comp;
     Referee ref;
-    
+    std::cout << "Enter move: ";
     Player* winner = ref.refGame(&player,&comp);
     if (winner == nullptr){
         std::cout << "It's a tie";
