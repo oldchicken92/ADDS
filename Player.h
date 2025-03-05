@@ -5,12 +5,12 @@
 
 class Player{
     public:
-    
-    ~Player();
+
+    virtual ~Player();
     std::string name;
     char move;
-    virtual void makeMove( );
-    virtual std::string getName( );
+    virtual void makeMove() = 0;
+    virtual std::string getName() = 0;
 };
 
 
