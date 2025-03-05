@@ -1,9 +1,13 @@
 #include "Referee.h"
 
 Player* Referee::refGame(Player * player1, Player * player2){
-    if (player1->move == player2->move){
+
+    char move1 = player1->move;
+    char move2 = player2->move;
+
+    if (move1 == move2){
         return nullptr;
-    }else if ((player1->move == 'R' && player2->move == 'S') || (player1->move == 'P' && player2->move == 'R') || (player1->move == 'S' && player2->move == 'P')){
+    }else if ((move1 == 'R' && move2 == 'S')||(move1 == 'P' && move2 == 'R')||(move1 == 'S' && move2 == 'P')){
         return player1;
     }else{
         return player2;
