@@ -4,9 +4,10 @@
 
 class Computer : public Player{
     public:
-    Computer(){this->name = "Computer"; this->move = 'R';};
+    std::string name;
+    Computer(){name = "Computer";};
     std::string getName(){return this->name;};
-    char makeMove(){this->move = 'R'; return this->move;};
+    char makeMove(){char move = 'R'; return move;};
 };
 
 #endif

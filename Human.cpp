@@ -1,14 +1,16 @@
 #include "Human.h"
+#include <iostream>
 
 char Human::makeMove(){
     std::cout << "Enter move: ";
-    std::cin >> this->move;
+    char move;
+    std::cin >> move;
 
-    while ((this->move != 'R') && (this->move != 'S') && (this->move != 'P')){
+    while ((move != 'R') && (move != 'S') && (move != 'P')){
         std::cout << std::endl;
         std::cout << "Enter move: ";
-        std::cin >> this->move;
-        return this->move;
+        std::cin >> move;
+        return move;
     }
 
     
