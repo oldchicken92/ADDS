@@ -5,13 +5,12 @@
 
 int main (){
 
-    Player* player = new Human("Bob");
-    Player* comp = new Computer();
+    Human player;
+    Computer comp;
     Referee ref;
+    player.makeMove();
 
-    player->makeMove();
-
-    Player* winner = ref.refGame(player,comp);
+    Player* winner = ref.refGame(&player,&comp);
     if (winner == nullptr){
         std::cout << "It's a tie";
     }else{

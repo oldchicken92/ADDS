@@ -9,7 +9,7 @@ class Player{
     virtual ~Player();
     std::string name;
     char move;
-    virtual void makeMove() = 0;
+    virtual char makeMove() = 0;
     virtual std::string getName() = 0;
 };
 

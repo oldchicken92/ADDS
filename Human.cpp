@@ -1,6 +1,6 @@
 #include "Human.h"
 
-void Human::makeMove(){
+char Human::makeMove(){
     std::cout << "Enter move: ";
     std::cin >> this->move;
 
@@ -8,6 +8,7 @@ void Human::makeMove(){
         std::cout << std::endl;
         std::cout << "Enter move: ";
         std::cin >> this->move;
+        return this->move;
     }
 
     
