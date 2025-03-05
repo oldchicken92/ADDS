@@ -3,8 +3,9 @@
 #include "Player.h"
 
 class Computer : public Player{
+    public:
     Computer(){this->name = "Computer"; this->move = 'R';};
-
+    std::string getName(){return this->name;};
 };
 
 #endif
