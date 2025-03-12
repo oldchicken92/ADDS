@@ -3,7 +3,6 @@
 
 Move* Computer::makeMove(){
     std::string move;
-    std::cout << this->name;
     std::cin >> move;
     moveReturn R;
     Move* actual_move = R.player_move(move);
