@@ -1,15 +1,9 @@
 #include "Human.h"
 #include <iostream>
 
-char Human::makeMove(){
-    char move;
+Move* Human::makeMove(){
+    std::string move;
+    std::cin >> move; 
 
-    while ((move != 'R') && (move != 'S') && (move != 'P')){
-        std::cout << std::endl;
-        std::cin >> move;
-        return move;
-    }
-
-    
 
 };
