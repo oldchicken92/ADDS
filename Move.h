@@ -10,6 +10,7 @@ class Move{
 
     public:
     std::string getName();    
+    std::vector<std::string> getWeakness();
 
 };
 

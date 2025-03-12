@@ -1,8 +1,9 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 #include "Player.h"
+#include "moveReturn.h"
 
-class Human : public Player {
+class Human : public Player{
     public:
     std::string name;
     Human(){this->name = "Human";};

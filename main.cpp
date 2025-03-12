@@ -5,11 +5,10 @@
 
 int main (){
 
-    Human player;
-    Computer comp;
+    Human player1("Bob");
+    Human player2("Jake");
     Referee ref;
-    std::cout << "Enter move: ";
-    Player* winner = ref.refGame(&player,&comp);
+    Player* winner = ref.refGame(&player1,&player2);
     if (winner == nullptr){
         std::cout << "It's a tie";
     }else{
