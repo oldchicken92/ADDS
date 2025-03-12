@@ -8,3 +8,7 @@ Move* Human::makeMove(){
     Move* actual_move = R.player_move(move);
     return actual_move;
 };
+
+std::string Human::getName(){
+    return this->name;
+};

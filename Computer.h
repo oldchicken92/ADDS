@@ -7,8 +7,8 @@ class Computer : public Player{
     public:
     std::string name;
     Computer(){name = "Computer";};
-    std::string getName(){return this->name;};
     Move* makeMove();
+    std::string getName();
 };
 
 #endif

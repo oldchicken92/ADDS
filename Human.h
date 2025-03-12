@@ -9,7 +9,7 @@ class Human : public Player{
     Human(){this->name = "Human";};
     Human(std::string player_name){this->name = player_name;};
     Move* makeMove();
-    std::string getName(){return this->name;};
+    std::string getName();
 };
 
 

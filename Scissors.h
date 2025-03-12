@@ -4,7 +4,7 @@
 
 class Scissors : public Move{
     public:
-    Scissors(){this->Move = "Scissors"; this->weakness = {"Rock"};};
+    Scissors();
 
 };
 
