@@ -6,7 +6,6 @@
 class checkPlayerLoss{
     public:
     bool weakness_check(Move* player1, Move* player2);
-
 };
 
 

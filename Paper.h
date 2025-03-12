@@ -5,12 +5,6 @@
 class Paper : public Move{
     public:
     Paper(){this->Move = "Paper"; this->weakness = {"Scissors"};};
-
-    
-
 };
-
-
-
 
 #endif
