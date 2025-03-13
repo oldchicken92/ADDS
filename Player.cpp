@@ -2,6 +2,3 @@
 
 Player::~Player(){};
 
-std::string Player::getName(){
-    return this->name;
-}
