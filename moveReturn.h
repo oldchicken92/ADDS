@@ -11,9 +11,10 @@
 #include "Monkey.h"
 #include <string>
 
+//class for move return
 class moveReturn{
     public:
-    Move* player_move(std::string player);
+    Move* player_move(std::string player); //player move returns the class of the move the player wishes to make
 
 };
 

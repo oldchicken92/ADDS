@@ -2,9 +2,10 @@
 #define MONKEY_H
 #include "Move.h"
 
+//class monkey, inherits move
 class Monkey : public Move{
     public:
-    Monkey(){this->Move = "Monkey"; this->weakness = {"Zombie", "Pirate"};}
+    Monkey();//constructor
 };
 
 #endif 

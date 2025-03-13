@@ -3,12 +3,12 @@
 #include "Player.h"
 #include "moveReturn.h"
 
+//human class, serves as the IRL player
 class Human : public Player{
     public:
-    Human(){this->name = "Human";};
-    Human(std::string player_name){this->name = player_name;};
-    Move* makeMove();
-    std::string getName();
+    Human(); //default constructor
+    Human(std::string player_name); //player name constructor
+    Move* makeMove(); //gets the player move
 };
 
 

@@ -3,9 +3,10 @@
 #include <string>
 #include "Move.h"
 
+//class rock, inherits move
 class Rock : public Move{
     public:
-    Rock(){this->Move = "Rock"; this->weakness = {"Paper"};};
+    Rock(); //constructor sets move name and weaknesses
     
 };
 

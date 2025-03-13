@@ -5,9 +5,8 @@
 
 class Computer : public Player{
     public:
-    Computer(){this->name = "Computer";};
+    Computer();
     Move* makeMove();
-    std::string getName();
 };
 
 #endif

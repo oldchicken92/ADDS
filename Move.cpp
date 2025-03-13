@@ -6,5 +6,5 @@ std::string Move::getName(){
 }
 
 std::vector<std::string> Move::getWeakness(){
-    return this->weakness;
+    return this->weakness; //returns the specific move weakness to later find what beats what
 }

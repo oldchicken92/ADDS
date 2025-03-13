@@ -1,5 +1,6 @@
 #include "moveReturn.h"
-
+//once given the players string, it decides which move the player has made
+//and returns the string interms of a class to then be manipulated later on
 
 Move* moveReturn::player_move(std::string player_move){
 
@@ -20,7 +21,7 @@ Move* moveReturn::player_move(std::string player_move){
     }else if(player_move == "Monkey"){
         return new Monkey;
     }else{
-        return nullptr;
+        return nullptr; //if player has not inputed any of the classes
     }
 
 }

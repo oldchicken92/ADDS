@@ -1,15 +1,16 @@
 #include "Computer.h"
 #include <iostream>
 
+//similar implementation to human, gets computers move which is rock
 Move* Computer::makeMove(){
-    std::string move;
-    std::cin >> move;
+    std::string move = "Rock";
     moveReturn R;
     Move* actual_move = R.player_move(move);
-    return actual_move;
+    return actual_move; //returns Rock class
 };
 
-std::string Computer::getName(){
-    return this->name;
-};
+//default constructor
+Computer::Computer(){
+    this->name = "Computer";
+}
 

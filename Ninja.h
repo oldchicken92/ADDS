@@ -4,7 +4,7 @@
 
 class Ninja : public Move{
     public:
-    Ninja(){this->Move = "Ninja"; this->weakness = {"Monkey", "Robot"};}
+    Ninja();
 };
 
 #endif

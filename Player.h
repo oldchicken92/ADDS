@@ -8,11 +8,12 @@
 #include <iostream>
 
 class Player{
+    protected:
+    std::string name; //hides player name, only accessible through getName()
     public:
-    std::string name;
     virtual ~Player();
     virtual Move* makeMove() = 0;
-    virtual std::string getName() = 0;
+    std::string getName();
     
 };
 

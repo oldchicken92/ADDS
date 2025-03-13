@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+//parent class for all of the moves
 class Move{
     protected: 
     std::string Move; 
