@@ -10,8 +10,6 @@ Move* Computer::makeMove(){
 };
 
 std::string Computer::getName(){
-    std::cout << this->name;
-    std::cout << "computer not pointer";
     return this->name;
 };
 

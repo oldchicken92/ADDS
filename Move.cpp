@@ -2,7 +2,6 @@
 #include <iostream>
 
 std::string Move::getName(){
-    std::cout << this->Move;
     return this->Move;
 }
 

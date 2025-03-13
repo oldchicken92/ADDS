@@ -11,6 +11,5 @@ Move* Human::makeMove(){
 
 
 std::string Human::getName(){
-    std::cout << "human";
     return this->name;
 };
