@@ -8,7 +8,9 @@ Move* Computer::makeMove(){
     Move* actual_move = R.player_move(move);
     return actual_move;
 };
-
+/*
 std::string Computer::getName(){
     return this->name;
 };
+
+*/

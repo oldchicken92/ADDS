@@ -9,6 +9,8 @@ Move* Human::makeMove(){
     return actual_move;
 };
 
+/*
 std::string Human::getName(){
     return this->name;
 };
+*/
