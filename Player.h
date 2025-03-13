@@ -9,6 +9,7 @@
 
 class Player{
     public:
+    std::string name;
     virtual ~Player();
     virtual Move* makeMove() = 0;
     virtual std::string getName() = 0;
