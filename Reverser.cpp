@@ -2,7 +2,7 @@
 #include <iostream>
 
 int Reverser::reverseDigit(int value){
-    if (value < 10){
+    if (value < 0){
         return - 1;
     }else{
         return reverseDigitHelper(value, 0);
