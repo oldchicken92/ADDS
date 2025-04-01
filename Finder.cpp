@@ -19,14 +19,3 @@
         }
         return result;
     }
-
-int main(){
-
-    string str = "263452345642346572345";
-    string sub = "2345";
-    Finder find;
-    vector<int> result = find.findSubstrings(str,sub);
-    
-
-    return 0;
-}
