@@ -10,7 +10,7 @@
             size_t found = s1.find(s2.substr(start, i));
             if (found != string::npos) {
                 result.push_back(found);
-                size_t start = found;
+                start = found;
             } else {
                 result.push_back(-1);
                 return result;
