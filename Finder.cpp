@@ -13,6 +13,7 @@
                 start = found;
             } else {
                 result.push_back(-1);
+                fill(result.begin() + i,result.end(),-1);
                 return result;
             }
         }
