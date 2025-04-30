@@ -6,6 +6,10 @@ LinkedList::LinkedList(){
 }
 
 LinkedList::LinkedList(int* array, int len){
+    head = nullptr;
+    for (int i = 0; i < len; ++i) {
+        insertPosition(i + 1, array[i]);
+    }
 
 };
 
@@ -29,7 +33,7 @@ void LinkedList::insertPosition(int pos, int newNum){
 
 
 bool LinkedList::deletePosition(int pos){
-    if (this->head = nullptr){
+    if (this->head == nullptr){
         return false; 
     }
 
@@ -60,7 +64,7 @@ int LinkedList::get(int pos){
 
     Node* index_node = this->head;
 
-    for (int i = 1; (index_node->getLink() != nullptr) && (i <  - 1); i++ ){
+    for (int i = 1; (index_node->getLink() != nullptr) && (i < pos - 1); i++ ){
         index_node = index_node->getLink();         
     }
 
@@ -100,10 +104,12 @@ void LinkedList::printList(){
 
     std::cout << "[ ";
     Node* index_node = this->head;
-    for (int i = 1; (index_node->getLink() != nullptr) && (i <  - 1); i++ ){
-        std::cout << index_node->getData() << " "; 
+    while (index_node != nullptr) {
+        std::cout << index_node->getData();
+        if (index_node->getLink() != nullptr) {
+            std::cout << " ";
+        }
         index_node = index_node->getLink();
     }
-
-    std::cout << "]";
+    std::cout << " ]";
 };
