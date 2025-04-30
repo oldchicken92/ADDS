@@ -52,6 +52,33 @@ std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
 }
 
 std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
-   
+    std::list<int> result = {0};
+    int zerosToAdd = 0;
+
+    auto it2 = num2.rbegin();
+    while (it2 != num2.rend()) {
+        int digit2 = *it2++;
+        std::list<int> partial;
+        int carry = 0;
+
+        for (auto it1 = num1.rbegin(); it1 != num1.rend(); ++it1) {
+            int prod = (*it1) * digit2 + carry;
+            partial.push_front(prod % 10);
+            carry = prod / 10;
+        }
+        if (carry > 0) partial.push_front(carry);
+
+        for (int i = 0; i < zerosToAdd; ++i) {
+            partial.push_back(0);
+        }
+
+        result = add(result, partial);
+        zerosToAdd++;
+    }
+
+    while (result.size() > 1 && result.front() == 0) {
+        result.pop_front();
+    }
+
     return result;
 }
