@@ -51,6 +51,7 @@ std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
     return result;
 }
 
+
 std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
     std::list<int> result = {0};
     int zerosToAdd = 0;
