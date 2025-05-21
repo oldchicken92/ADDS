@@ -154,16 +154,42 @@ class Heap {
         // TO BE IMPLEMENTED
         // Insert an element into the heap
         void insert(T element) {
+            this->tree.push_back(element);
+            heapIndex index = this->tree.size() - 1;
+            
+            while(index > 1) {
+                heapIndex parentIndex = this->getParentPosition(index);
+                if(this->tree.at(parentIndex) > this->tree.at(index)) {
+                    std::swap(this->tree.at(parentIndex), this->tree.at(index));
+                    index = parentIndex;
+                } else {
+                    break;
+                }
+            }
         }
         
         // TO BE IMPLEMENTED
         // Remove an element from the heap
-        void remove(T value) {
+        void remove(T value) {  
+            // Find the index of the element to remove
+            T i = std::find(this->tree.begin(), this->tree.end(), value);
+            if(i != this->tree.end()) {
+                heapIndex index = std::distance(this->tree.begin(), i);
+                this->tree.at(index) = this->tree.back();
+                this->tree.pop_back();
+                this->heapifyDown(index);
+            } else {
+                return;
+            }
         }
         
         // TO BE IMPLEMENTED
         // Get the minimum element (in this case, the maximum element of the max-heap)
         T getMin() {
+            if(this->isHeapEmpty()) {
+                return std::numeric_limits<T>::min();
+            }
+            return this->tree.at(1);
         }
 };
 
