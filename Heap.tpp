@@ -172,7 +172,7 @@ class Heap {
         // Remove an element from the heap
         void remove(T value) {  
             // Find the index of the element to remove
-            T i = std::find(this->tree.begin(), this->tree.end(), value);
+            auto i = std::find(this->tree.begin(), this->tree.end(), value);
             if(i != this->tree.end()) {
                 heapIndex index = std::distance(this->tree.begin(), i);
                 this->tree.at(index) = this->tree.back();
