@@ -42,12 +42,12 @@
 
         //check borrow limit
         Document* doc = this->document_storage[docid];
-        if (doc->getNumBorrowed() <= doc->getLimit()){
+        if (doc->getNumBorrowed() >= doc->getLimit()){
             return false;
         }
 
         //Check to see if patron already borrowed it
-        std::vector patrons = doc->getPatronList();
+        std::vector<int> patrons = doc->getPatronList();
         auto patron_it = std::find(patrons.begin(), patrons.end(), patronID);
         if (patron_it != patrons.end()){
             return true;
@@ -57,7 +57,7 @@
         patrons.push_back(patronID);
         doc->setPatronList(patrons); //set updated vecotr in doc
         int prev_num = doc->getNumBorrowed();
-        doc->setNumBorrowed(prev_num++); //set right number of docs borrowed
+        doc->setNumBorrowed(prev_num + 1); //set right number of docs borrowed
         return true;
 
     };  // returns true if document is borrowed, false if it can not be borrowed (invalid patronid or the number of copies current borrowed has reached the license limit)
@@ -74,7 +74,7 @@
         Document* doc = this->document_storage[docid];
         
         //Check to see if patron ever borrowed it
-        std::vector patrons = doc->getPatronList();
+        std::vector<int> patrons = doc->getPatronList();
         auto patron_it = std::find(patrons.begin(), patrons.end(), patronID);
         if (patron_it == patrons.end()){
             return;
@@ -84,7 +84,7 @@
         patrons.erase(patron_it);
         doc->setPatronList(patrons);
         int num_borrowed = doc->getNumBorrowed();
-        doc->setNumBorrowed(num_borrowed);
+        doc->setNumBorrowed(num_borrowed - 1);
         return; 
 
     };
