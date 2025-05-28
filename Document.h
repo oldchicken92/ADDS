@@ -9,6 +9,7 @@ class Document{
     std::string name;
     int id; 
     int limit; 
+    int num_borrowed; 
     std::vector<int> patronList; 
 
     public: 
@@ -18,6 +19,11 @@ class Document{
     void setID(int ID){this->id = ID;}
     int getID(){return this->id;}
     void setLimit(int lim){this->limit = lim;}
+    int getLimit(){return this->limit;}
+    void setNumBorrowed(int num){this->num_borrowed = num;}
+    int getNumBorrowed(){return this->num_borrowed;}
+    std::vector<int> getPatronList(){return this->patronList;}
+    void setPatronList(const std::vector<int> setter){this->patronList = setter;}
     
 };
 

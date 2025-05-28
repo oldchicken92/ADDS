@@ -6,12 +6,14 @@
 #include <unordered_map>
 #include "Document.h"
 #include "Patron.h"
+#include <algorithm>
 
 class DocumentManager{
     private: 
 
     std::unordered_map<int, std::string> document_Library; 
     std::unordered_map<int, Patron*> patrons;
+    std::unordered_map<int, Document*> document_storage;
 
     public:
 
