@@ -13,7 +13,10 @@ class Document{
     std::vector<int> patronList; 
 
     public: 
-    Document();
+    Document(){
+        this->name = ""; 
+        this->patronList; 
+    };
     void setName(std::string new_name){this->name = new_name;}
     std::string getName(){return this->name;}
     void setID(int ID){this->id = ID;}

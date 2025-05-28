@@ -21,7 +21,6 @@
     };
 
     int DocumentManager::search(std::string name){
-        bool check; 
         for (auto i = this->document_Library.begin(); i!=this->document_Library.end(); i++){
             if (i->second == name){
                 return i->first;
